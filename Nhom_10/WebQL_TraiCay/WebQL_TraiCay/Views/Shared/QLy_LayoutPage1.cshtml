@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Quản lý</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Images/Admin.jpg">
+    @Styles.Render("~/assets/css/bootstrap.min.css")
+    @Styles.Render("~/assets/css/templatemo.css")
+    @Styles.Render("~/assets/css/custom.css")
+    @Styles.Render("~/assets/css/fontawesome.min.css")
+    @Styles.Render("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <div class="row bg-dark ">
+            <h3 class="text-white text-center p-1">CÁC DANH SÁCH</h3>
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto flex-row">
+                        
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="Quanly/DS_TraiCay">Trái cây</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white" href="#">Nhà cung cấp</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white" href="#">Nhà sản xuất</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white" href="#">Đơn hàng</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white" href="/Home/Index">Quay về</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        <div class="row">
+            @RenderBody()
+        </div>
+       
+    </div>
+    <script src="/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/templatemo.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

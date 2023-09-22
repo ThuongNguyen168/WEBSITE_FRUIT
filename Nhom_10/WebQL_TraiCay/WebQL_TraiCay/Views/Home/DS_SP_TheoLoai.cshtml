@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "DS_SP_TheoLoai";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+@using WebQL_TraiCay.Models;
+@model List<TRAICAY>
+<div class="row m-3">
+    <div class="col-2">
+        @Html.Action("DanhMuc_SP_2", "Home")
+    </div>
+    <div class="col-9">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-4">
+                    <div class="product-wap card rounded-0">
+                        <div class="card rounded-0">
+                            <img class="card-img rounded-0 img-fluid" src="/Images/@item.DUONGDAN" style="width:350px;height:300px">
+                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <li><a class="btn btn-success text-white mt-2" href="/Home/ChiTietSP/@item.MATC"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="/GioHang/XemGioHang"><i class="fas fa-cart-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a href="/Home/ChiTietSP/@item.MATC" class="h3 text-decoration-none">@item.TENTC</a>
+                            <ul class="list-unstyled mb-1">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                    <i class="text-muted fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <p class="text-right mb-0">@String.Format("{0: #,##}", item.GIAMOI) VNĐ</p>
+                            <p class="text-muted text-right">
+                                Lượt xem: <span>
+                                    @{if (item.LUOTXEM == null)
+                                    {
+                                        <span>0</span>
+                                    }
+                                    else
+                                    {
+                                        @item.LUOTXEM
+                                    }
+                                    }
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

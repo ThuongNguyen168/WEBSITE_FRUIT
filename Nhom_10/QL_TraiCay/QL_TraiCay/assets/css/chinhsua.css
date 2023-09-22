@@ -1,0 +1,32 @@
+﻿body {
+}
+
+.content
+{
+    width:50%;
+}
+
+.nen
+{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    align-items:center;
+    justify-content:center;
+}
+#background 
+{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1000;
+}
+
+.f1
+{
+    text-shadow: 0 0 30px #ff00dc;
+    font-family: SVN-Cookies;
+    color: #ff00dc;
+}

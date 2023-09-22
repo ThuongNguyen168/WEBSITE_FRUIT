@@ -1,0 +1,100 @@
+﻿@model WebQL_TraiCay.Models.TRAICAY
+
+@{
+    ViewBag.Title = "chitiet";
+    Layout = "~/Views/Shared/QLy_LayoutPage1.cshtml";
+}
+
+<h2>Chi Tiết</h2>
+
+<fieldset>
+    <legend>TRAICAY</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MALOAI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MALOAI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TENTC)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TENTC)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DONVI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DONVI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GIAMOI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GIAMOI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CHITIET)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CHITIET)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HSD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HSD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NSX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NSX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GIAMGIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GIAMGIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIST_HINHANH)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIST_HINHANH)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LUOTXEM)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LUOTXEM)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TRANGTHAI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TRANGTHAI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DUONGDAN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DUONGDAN)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MATC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,109 @@
+﻿@model IEnumerable<WebQL_TraiCay.Models.TRAICAY>
+
+@{
+    ViewBag.Title = "Danh sách trái cây";
+    Layout = "~/Views/Shared/QLy_LayoutPage1.cshtml";
+}
+
+<h2 class="text-center">DANH SÁCH TRÁI CÂY</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Them_TC")
+</p>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            Mã trái cây
+        </th>
+        <th>
+           Tên trái cây
+        </th>
+        <th>
+            Đơn vị
+        </th>
+        <th>
+            GIá
+        </th>
+        <th>
+            Chi tiết
+        </th>
+        @*<th>
+           Hạn sử dụng
+        </th>
+        <th>
+           Ngày sản xuất
+        </th>
+        <th>
+            Giảm giá
+        </th>*@
+        <th>
+           Hình ảnh
+        </th>
+        <th>
+           Lượt xem
+        </th>
+        <th>
+           Trạng thái
+        </th>
+        <th>
+            Đường dẫn
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MALOAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENTC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DONVI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIAMOI)
+        </td>
+        <td>
+            @item.CHITIET.Substring(0,50).ToString())
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.HSD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NSX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIAMGIA)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.LIST_HINHANH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUOTXEM)
+        </td>
+        <td>
+            @{
+                if(item.TRANGTHAI == true)
+                { 
+                    <p>Còn</p>
+                }
+                else
+                {
+                     <p>Hết</p>
+                }   
+            }
+        </td>
+        <td>
+            <img src="/Images/@item.DUONGDAN" width="50" height="50"/>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MATC }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MATC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MATC })
+        </td>
+    </tr>
+}
+
+</table>

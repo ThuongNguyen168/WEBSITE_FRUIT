@@ -1,0 +1,24 @@
+﻿@using WebQL_TraiCay.Models;
+@model List<TRAICAY>
+@foreach (var item in Model)
+{
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row p-5">
+                <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                    <img class="img-fluid" src="/Images/@item.DUONGDAN" alt="@item.TENTC" style="width:500px; height:300px">
+
+                </div>
+                <div class="col-lg-6 mb-0 d-flex align-items-center">
+                    <div class="text-align-left">
+                        <h1 class="h1 text-success">@item.TENTC</h1>
+                        <h3 class="h2">Sản phẩm tiêu biểu</h3>
+                        <p>
+                            @item.CHITIET
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

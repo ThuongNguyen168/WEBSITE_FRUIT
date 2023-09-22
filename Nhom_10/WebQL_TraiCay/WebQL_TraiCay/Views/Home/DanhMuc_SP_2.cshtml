@@ -1,0 +1,55 @@
+﻿@using WebQL_TraiCay.Models;
+@{
+
+    List<LOAITRAICAY> VN = ViewBag.VN;
+    List<LOAITRAICAY> NK = ViewBag.NK;
+    List<LOAITRAICAY> TL = ViewBag.TL;
+
+}
+<div class="container p-0 m-0">
+    <h1 class="h2 pb-4">DANH MỤC</h1>
+    <ul class="list-unstyled templatemo-accordion">
+        <li class="pb-3">
+            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                Việt Nam
+                <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+            </a>
+            <ul class="collapse show list-unstyled pl-3">
+                @foreach (var item in VN)
+                {
+
+                    <li><a class="text-decoration-none" href="/Home/DS_SP_TheoLoai/@item.MALOAI">@item.TENLOAI</a></li>
+
+                }
+            </ul>
+        </li>
+        <li class="pb-3">
+            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                Nhập khẩu
+                <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+            </a>
+            <ul class="collapse show list-unstyled pl-3">
+                @foreach (var item in NK)
+                {
+
+                    <li><a class="text-decoration-none" href="/Home/DS_SP_TheoLoai/@item.MALOAI">@item.TENLOAI</a></li>
+
+                }
+            </ul>
+        </li>
+        <li class="pb-3">
+            <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                Thái Lan
+                <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+            </a>
+            <ul class="collapse show list-unstyled pl-3">
+                @foreach (var item in TL)
+                {
+
+                    <li><a class="text-decoration-none" href="/Home/DS_SP_TheoLoai/@item.MALOAI">@item.TENLOAI</a></li>
+
+                }
+            </ul>
+        </li>
+    </ul>
+</div>

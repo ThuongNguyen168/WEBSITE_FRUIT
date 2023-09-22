@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using WebQL_TraiCay.Models;
+@model List<TRAICAY>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card col-3 p-2 m-4">
+                <img src="/Images/@item.DUONGDAN" width="300" height="200" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title " style="height:65px;">@item.TENTC</h5>
+                    @{float i = (float)@item.GIAMOI.Value;}
+                    <p class="card-text float-right" style="color: red">@i VNĐ</p>
+                    <small>
+                        Lượt xem: <span class="text-light font-italic">
+                            @{
+            if (item.LUOTXEM == null)
+            {
+                <span>0</span>
+            }
+            else
+            {
+                @item.LUOTXEM
+            }
+                            }
+                        </span>
+                    </small>
+                </div>
+            </div>
+        }
+    </div>
+</div>

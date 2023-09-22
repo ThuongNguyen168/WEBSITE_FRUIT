@@ -1,0 +1,111 @@
+﻿@using QL_TraiCay.Models
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 1;
+    List<LOAITRAICAY> VN = ViewBag.VN;
+    List<LOAITRAICAY> NK = ViewBag.NK;
+    List<LOAITRAICAY> TL = ViewBag.TL;
+}
+
+<div class="container">
+    <div class="container ml-5">
+        <table class="table mt-4 p-0">
+            <tr>
+                <th class="bg-success" style="color:white; border-radius:10px">
+                    VIỆT NAM
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        @{
+                            i = 6;
+                        }
+                        <tr>
+                            @foreach (var item in VN)
+                            {
+                                if (@item.MALOAI.Contains("VN"))
+                                {
+                                    string img = i.ToString() + ".jpg";
+                                    <td class="p-2">
+                                        <div class="container">
+                                            <a href="/Home/DS_SP_TheoLoai/@item.MALOAI"><img src="/Images/@img" class="rounded-circle img-fluid border" style="width:200px; height:200px"></a>
+                                        </div>
+                                        <h5 class="text-center mt-3 mb-3"><a href="/Home/DS_SP_TheoLoai/@item.MALOAI" style="text-decoration:none;" class="text-dark">@item.TENLOAI</a></h5>
+                                    </td>
+                                    i++;
+                                }
+
+                            }
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="bg-success" style="background-color: green; color: white; border-radius: 10px">
+                    NHẬP KHẨU
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        @{
+                            i = 1;
+                        }
+                        <tr>
+                            @foreach (var item in NK)
+                            {
+                                if (@item.MALOAI.Contains("NK"))
+                                {
+                                    string img = i.ToString() + ".jpg";
+                                    <td class="p-2">
+                                        <div class="container">
+                                            <a href="/Home/DS_SP_TheoLoai/@item.MALOAI"><img src="/Images/@img" class="rounded-circle img-fluid border" style="width:200px; height:200px"></a>
+                                        </div>
+                                        <h5 class="text-center mt-3 mb-3"><a href="/Home/DS_SP_TheoLoai/@item.MALOAI" style="text-decoration:none;" class="text-dark">@item.TENLOAI</a></h5>
+                                    </td>
+                                    i++;
+                                }
+
+                            }
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <th class="bg-success" style="background-color: green; color: white; border-radius: 10px">
+                    THÁI LAN
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        @{
+                            i = 10;
+                        }
+                        <tr>
+                            @foreach (var item in TL)
+                            {
+                                if (@item.MALOAI.Contains("TL"))
+                                {
+                                    string img = i.ToString() + ".jpg";
+                                    <td class="p-2">
+                                        <div class="container">
+                                            <a href="/Home/DS_SP_TheoLoai/@item.MALOAI"><img src="/Images/@img" class="rounded-circle img-fluid border" style="width:200px; height:200px"></a>
+                                        </div>
+                                        <h5 class="text-center mt-3 mb-3"><a href="/Home/DS_SP_TheoLoai/@item.MALOAI" style="text-decoration:none;" class="text-dark">@item.TENLOAI</a></h5>
+                                    </td>
+                                    i++;
+                                }
+
+                            }
+                    </table>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+</div>

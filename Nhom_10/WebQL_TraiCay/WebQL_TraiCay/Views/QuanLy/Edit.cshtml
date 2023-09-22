@@ -1,0 +1,125 @@
+﻿@model WebQL_TraiCay.Models.TRAICAY
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/QLy_LayoutPage1.cshtml";
+}
+<link href="~/assets/css/bootstrap.css" rel="stylesheet" />
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TRAICAY</legend>
+
+        @Html.HiddenFor(model => model.MATC)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MALOAI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MALOAI)
+            @Html.ValidationMessageFor(model => model.MALOAI)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TENTC)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TENTC)
+            @Html.ValidationMessageFor(model => model.TENTC)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DONVI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DONVI)
+            @Html.ValidationMessageFor(model => model.DONVI)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GIAMOI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GIAMOI)
+            @Html.ValidationMessageFor(model => model.GIAMOI)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CHITIET)
+        </div>
+        <div class="editor-field">
+            <textarea>@Model.CHITIET</textarea>
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HSD)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HSD)
+            @Html.ValidationMessageFor(model => model.HSD)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NSX)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NSX)
+            @Html.ValidationMessageFor(model => model.NSX)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GIAMGIA)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GIAMGIA)
+            @Html.ValidationMessageFor(model => model.GIAMGIA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LIST_HINHANH)
+            @ViewBag.Thongbao
+        </div>
+        <div class="editor-field">
+            <input type="file" name="fileUpLoad" />
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LUOTXEM)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LUOTXEM)
+            @Html.ValidationMessageFor(model => model.LUOTXEM)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TRANGTHAI)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TRANGTHAI)
+            @Html.ValidationMessageFor(model => model.TRANGTHAI)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DUONGDAN)
+            @ViewBag.Thongbao
+        </div>
+        <div class="editor-field">
+            <input type="file" name="fUpLoad" />
+        </div>
+
+        <p>
+            
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

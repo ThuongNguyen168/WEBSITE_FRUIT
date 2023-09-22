@@ -1,0 +1,68 @@
+﻿@model WebQL_TraiCay.Models.TRAICAY
+ 
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/QLy_LayoutPage1.cshtml";
+}
+@Styles.Render("~/assets/css/bootstrap.min.css")
+<h3>Bạn có muốn xóa không?</h3>
+<table>
+    <tr>
+        <th width="140">Mã Trái Cây</th>
+        <td >@Model.MATC</td>
+    </tr>
+    <tr>
+        <th>Mã Loại</th>
+        <td>@Model.MALOAI</td>
+    </tr>
+    <tr>
+        <th>Tên Trái Cây</th>
+        <td>@Model.TENTC</td>
+    </tr>
+    <tr>
+        <th>Đơn Vị</th>
+        <td>@Model.DONVI</td>
+    </tr>
+    <tr>
+        <th>Giá Mới</th>
+        <td>@Model.GIAMOI</td>
+    </tr>
+    <tr>
+        <th>Chi Tiết</th>
+        <td>@Model.CHITIET</td>
+    </tr>
+    <tr>
+        <th>HSD</th>
+        <td>@Model.HSD</td>
+    </tr>
+    <tr>
+        <th>NSX</th>
+        <td>@Model.NSX</td>
+    </tr>
+    <tr>
+        <th>Giảm Giá</th>
+        <td>@Model.GIAMGIA</td>
+    </tr>
+    <tr>
+        <th>Lượt Xem</th>
+        <td>@Model.LUOTXEM</td>
+    </tr>
+    <tr>
+        <th>Trạng Thái</th>
+        <td>@Model.TRANGTHAI</td>
+    </tr>
+    <tr>
+        <td colspan="2"> <img src="/Images/@Model.DUONGDAN" /> </td>
+    </tr>
+    <tr>
+        <td colspan="2"> <img src="/Images/@Model.LIST_HINHANH" /> </td>
+    </tr>
+
+</table>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Xóa"/> |
+        @Html.ActionLink("Trở về", "Index")
+    </p>
+}

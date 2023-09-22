@@ -1,0 +1,56 @@
+﻿@model WebQL_TraiCay.Models.NHACUNGCAP
+
+<div class="nav navbar p-0 m-0">
+    <div class="dropdown">
+        <div class="nav-link dropdown-toggle p-0 m-0" id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @Model.TENNCC
+        </div>
+        <div style="position: relative" class="dropdown-menu position-relative" aria-labelledby="dropdownMenuButton">
+            <div class="container">
+                <div class="row">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="mt-2">Mô tả:</h5>
+                            <p>@Model.THONGTINNCC</p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h6>Số điện thoại:</h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="text-dark">@Model.SDT</p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h6>Địa chỉ:</h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="text-dark">@Model.DIACHI</p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h6>Email: </h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="text-dark">@Model.EMAIL</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

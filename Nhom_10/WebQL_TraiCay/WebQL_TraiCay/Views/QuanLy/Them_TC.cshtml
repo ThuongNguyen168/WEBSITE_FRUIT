@@ -1,0 +1,123 @@
+﻿@model WebQL_TraiCay.Models.TRAICAY
+@using QL_TraiCay.Models
+@{
+    ViewBag.Title = "Thêm trái cây";
+    Layout = "~/Views/Shared/QLy_LayoutPage1.cshtml";
+}
+<center>
+    @using (Html.BeginForm("XLThem", "QuanLy", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+    {@Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <div class="editor-label">
+                Mã trái cây
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.MATC)
+                @Html.ValidationMessageFor(model => model.MATC)
+            </div>
+            <div class="editor-label">
+                Mã Loại
+            </div> 
+            <div class="editor-field">
+                @Html.DropDownList("MaLoai")
+            </div>
+
+            <div class="editor-label">
+                Tên trái cây
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.TENTC)
+                @Html.ValidationMessageFor(model => model.TENTC)
+            </div>
+
+            <div class="editor-label">
+                Đơn vị
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.DONVI)
+                @Html.ValidationMessageFor(model => model.DONVI)
+            </div>
+
+            <div class="editor-label">
+                Giá
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.GIAMOI)
+                @Html.ValidationMessageFor(model => model.GIAMOI)
+            </div>
+
+            <div class="editor-label">
+                Chi tiết
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.CHITIET)
+                @Html.ValidationMessageFor(model => model.CHITIET)
+            </div>
+
+            @*<div class="editor-label">
+                   Hạn sử dụng
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.HSD)
+                    @Html.ValidationMessageFor(model => model.HSD)
+                </div>
+
+                <div class="editor-label">
+                    Ngày sản xuất
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.NSX)
+                    @Html.ValidationMessageFor(model => model.NSX)
+                </div>*@
+
+            <div class="editor-label">
+                Giảm giá
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.GIAMGIA)
+                @Html.ValidationMessageFor(model => model.GIAMGIA)
+            </div>
+
+            <div class="editor-label">
+                Hình ảnh
+            </div>
+            <div class="editor-field">
+                <input type="file" name="flistupload" />
+            </div>
+
+            @*<div class="editor-label">
+                   Lượt xem
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.LUOTXEM)
+                    @Html.ValidationMessageFor(model => model.LUOTXEM)
+                </div>*@
+
+            <div class="editor-label">
+                Trạng thái
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.TRANGTHAI)
+                @Html.ValidationMessageFor(model => model.TRANGTHAI)
+            </div>
+
+            <div class="editor-label">
+                Hình ảnh
+            </div>
+            <div class="editor-field">
+                <input type="file" name="fupload" />
+            </div>
+            <br />
+            <p>
+                <input type="submit" value="Tạo mới" />
+            </p>
+        </fieldset>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</center>

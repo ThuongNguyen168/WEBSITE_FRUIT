@@ -1,0 +1,64 @@
+﻿<link href="~/assets/css/chinhsua.css" rel="stylesheet" />
+<link href="~/assets/css/bootstrap.css" rel="stylesheet" />
+
+<title>Đăng ký</title>
+<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+<link rel="shortcut icon" type="image/x-icon" href="/Images/Hnen_2.jpg">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<div class="container-fluid">
+    <div class="row nen">
+
+        <img src="~/Images/THTĐ.png" />
+        <video style="width:100%; height:100%" id="background" autoplay preload="auto" loop="loop" muted>
+            <source src="/Images/logo.mp4" type="video/mp4" />
+        </video>
+        <div class="content">
+            <form method="post" action="/Home/SauKhiDangKi">
+                <h2 class="f1 text-center mt-3">ĐĂNG KÍ TÀI KHOẢN</h2>
+                <div class="d-flex pb-2 pt-3 ml-5">
+                    <i class='fas fa-user-alt pr-3' style='font-size:25px;color:#ff00dc'></i>
+                    <input type="text" class="form-control w-50" name="hoten" placeholder="Name" required autofocus>
+                </div>
+
+                <div class="d-flex pb-2 ml-5">
+                    <i class='fas fa-phone pr-3' style='font-size:25px;color:#ff00dc'></i>
+                    <input type="number" class="form-control w-50" name="sdt" placeholder="Phone number" required autofocus>
+                </div>
+
+                @*<div class="d-flex pb-2 ml-5">
+                        <i class='far fa-images pr-3' style='font-size:25px;color:#ff00dc'></i>
+                        <input type="text" class="form-control w-50" name="avatar" placeholder="Avatar" required autofocus>
+                    </div>*@
+
+                <div class="d-flex pb-2 ml-5">
+                    <i class='fas fa-map-marker-alt pr-3' style='font-size:25px;color:#ff00dc'></i>
+                    <input type="text" class="form-control w-50" name="diachi" placeholder="Address" required autofocus>
+
+                </div>
+                <div class="d-flex pb-2 ml-5">
+                    <i class='fas fa-user-alt pr-3' style='font-size:25px;color:#ff00dc'></i>
+                    <input type="email" class="form-control w-50" name="email" placeholder="Email" required autofocus>
+
+                </div>
+                <div class="d-flex pb-2 ml-5">
+                    <i class='fas fa-user-alt pr-3' style='font-size:25px;color:#ff00dc'></i>
+                    <input type="text" class="form-control w-50" name="username" placeholder="Username" required autofocus>
+
+                </div>
+                <div class="d-flex pb-2  ml-5">
+                    <i class='fas fa-key pr-3' style='font-size:25px;color:#ff00dc'></i>
+                    <input type="password" id="inputPassword" class="form-control w-75 " name="password" placeholder="Password" required>
+
+                </div>
+                <button class="btn btn-lg btn-primary btn-block w-75 ml-5" type="submit">Đăng kí</button>
+                <p class="mt-5 mb-3 text-muted text-center"></p>
+            </form>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
